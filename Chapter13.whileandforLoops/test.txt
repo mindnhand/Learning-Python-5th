@@ -1,0 +1,6 @@
+In general, loops come in handy anywhere you need to repeat an operation or process
+something more than once. Because files contain multiple characters and lines, they are
+one of the more typical use cases for loops. To load a file’s contents into a string all at
+once, you simply call the file object’s read method:
+file = open('test.txt', 'r') # Read contents into a string
+print(file.read())
