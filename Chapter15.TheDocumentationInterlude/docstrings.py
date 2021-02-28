@@ -4,7 +4,8 @@
 
 
 #------------------------------------
-#
+# Usage: python3 docstrings.py
+# Description: Example for docstring
 #------------------------------------
 
 

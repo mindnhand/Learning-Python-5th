@@ -4,7 +4,8 @@
 
 
 #-----------------------------------------
-#
+# Usage: python3 first_example.py
+# Description: Function definition and call
 #-----------------------------------------
 
 
