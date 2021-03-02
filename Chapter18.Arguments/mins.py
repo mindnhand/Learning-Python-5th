@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+#encoding=utf-8
+
+
+
+#-----------------------------------------------------
+# Usage: python3 mins.py
+# Description: three methods to calculate the minimal value
+#-----------------------------------------------------
+
+
+
+def min1(*args):                # all position value will be gather into a tuple
+    res = args[0]
+    for arg in args[1:]:
+        if arg < res:
+            res = arg
+    return res
+
+
+def min2(first, *rest):
+    for arg in rest:
+        if arg < first:
+            first = arg
+    return first
+
+
+def min3(*args):
+    tmp = list(args)
+    tmp.sort()
+    return tmp[0]
+
+
+
+print(min1(4, 3, 1, 2))
+print(min2('bb', 'aa'))
+print(min3([2, 2], [1, 1], [3, 3]))
