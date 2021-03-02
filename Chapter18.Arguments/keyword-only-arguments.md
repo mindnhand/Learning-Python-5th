@@ -6,7 +6,7 @@
 >
 > ```python
 > >>> def kwonly(a, *b, c):
-> 		print(a, b, c)
+>         print(a, b, c)
 > >>> kwonly(1, 2, c=3)
 > 1 (2,) 3
 > >>> kwonly(a=1, c=3)
@@ -23,7 +23,7 @@
 >
 > ```python
 > >>> def kwonly(a, *, b, c):
-> 		print(a, b, c)
+>         print(a, b, c)
 > >>> kwonly(1, c=3, b=2)
 > 1 2 3
 > >>> kwonly(c=3, b=2, a=1)
@@ -40,7 +40,7 @@
 >
 > ```python
 > >>> def kwonly(a, *, b='spam', c='ham'):
-> 		print(a, b, c)
+>         print(a, b, c)
 > >>> kwonly(1)
 > 1 spam ham
 > >>> kwonly(1, c=3)
@@ -58,7 +58,7 @@
 >
 > ```python
 > >>> def kwonly(a, *, b, c='spam'):
-> 		print(a, b, c)
+>         print(a, b, c)
 > >>> kwonly(1, b='eggs')
 > 1 eggs spam
 > >>> kwonly(1, c='eggs')
@@ -66,7 +66,7 @@
 > >>> kwonly(1, 2)
 > TypeError: kwonly() takes 1 positional argument but 2 were given
 > >>> def kwonly(a, *, b=1, c, d=2):
-> 		print(a, b, c, d)
+>         print(a, b, c, d)
 > >>> kwonly(3, c=4)
 > 3 1 4 2
 > >>> kwonly(3, c=4, b=5)
