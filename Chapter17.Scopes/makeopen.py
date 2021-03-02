@@ -39,6 +39,15 @@
 #        In [16]: open = io.open
 #        In [17]: open
 #        Out[17]: <function io.open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)>
+#        
+#        RECOVER __builtin__.open        
+#        In [57]: __builtin__.open
+#        Out[57]: <function makeopen.makeopen.<locals>.custom(*args, **kwargs)>
+#        In [58]: import builtins
+#        In [59]: builtins.open = io.open
+#        In [60]: __builtin__.open
+#        Out[60]: <function io.open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)>
+#        In [61]: 
 #--------------------------------------------------
 
 
