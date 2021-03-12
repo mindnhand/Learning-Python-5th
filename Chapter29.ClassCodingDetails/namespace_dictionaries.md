@@ -32,7 +32,7 @@ vary):
 > (<class '__main__.Super'>,)
 > >>> Super.__bases__ 			# () empty tuple in Python 2.X
 > (<class 'object'>,)
-```
+> ```
 
 As classes assign to self attributes, they populate the instance objects—that is, attributes
 wind up in the instances' attribute namespace dictionaries, not in the classes'.
@@ -52,7 +52,7 @@ and self is a hook into that namespace:
 > ['__module__', 'hello', '__dict__', '__qualname__', '__doc__', '__weakref__']
 > >>> Y.__dict__
 > {}
-```
+> ```
 
 Notice the extra underscore names in the class dictionaries; Python sets these automatically,
 and we can filter them out with the generator expressions we saw in Chapter
