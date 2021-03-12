@@ -34,8 +34,8 @@ vary):
 > (<class 'object'>,)
 ```
 
-<u>As classes assign to self attributes, they populate the instance objects—that is, attributes
-wind up in the instances' attribute namespace dictionaries, not in the classes'.</u>
+As classes assign to self attributes, they populate the instance objects—that is, attributes
+wind up in the instances' attribute namespace dictionaries, not in the classes'.
 An instance object's namespace records data that can vary from instance to instance,
 and self is a hook into that namespace:
 > ```python
