@@ -267,21 +267,24 @@ this in its self-test code -- an application of the factory pattern's mechanics 
 script in action, being run by the lister module that imports it to test its own class (with the same results in 2.X
 and 3.X again); we can run the test script itself too, but that mode tests the two lister variants, which we have yet
 to see (or code!):
-> ```python
+> 
+> > ```python
 > > c:\code> python listinstance.py
 > > <Instance of Sub, address 43256968:
 > > data1=spam
 > > data2=eggs
 > > data3=42
-> > 
+> > ```
+> 
+> > ```python
 > > c:\code> python testmixin.py
 > > <Instance of Sub, address 43977584:
 > > data1=spam
 > > data2=eggs
 > > data3=42
-> > 
+> > ```
+> 
 > ...and tests of two other lister classes coming up...
-> ```
 
 The ListInstance class we've coded so far works in any class it's mixed into because self refers to an instance
 of the subclass that pulls this class in, whatever that may be.
@@ -414,7 +417,8 @@ escapes a % with %% so that just one remains for the final formatting operation 
 > ```
 
 With this change, the class's test output is a bit more sophisticated, but also more concise and usable:
-> ```powershell
+> 
+> > ```powershell
 > > c:\code> c:\python27\python listinherited2.py
 > > <Instance of Sub, address 36299208:
 > > Unders-----------------------------------------------------------------------------
@@ -426,7 +430,9 @@ With this change, the class's test output is a bit more sophisticated, but also 
 > > data3=42
 > > ham=<bound method Sub.ham of <testmixin.Sub instance at 0x000000000229E1C8>>
 > > spam=<bound method Sub.spam of <testmixin.Sub instance at 0x000000000229E1C8>>
+> > ```
 > 
+> > ```powershell
 > > c:\code> c:\python33\python listinherited2.py
 > > <Instance of Sub, address 43318912:
 > > Unders-----------------------------------------------------------------------------
@@ -441,7 +447,8 @@ With this change, the class's test output is a bit more sophisticated, but also 
 > > data3=42
 > > ham=<bound method Sub.ham of <testmixin.tester.<locals>.Sub object at 0x0000000
 > > spam=<bound method Sub.spam of <testmixin.tester.<locals>.Sub object at 0x00000
-> ```
+> >  ```
+> 
 
 Display format is an open-ended problem (e.g., Python's standard pprint "pretty printer" module may offer options
 here too), so we'll leave further polishing as a suggested exercise. The tree lister of the next section may be
@@ -534,13 +541,19 @@ context -- recursive calls embedded in a generator expression -- and has no obvi
 especially given this program's limited scope (neither alternative makes a temporary list, though the first
 may create more temporary results depending on the internal implementation of strings, concatenation, and 
 join -- something you'd need to time with Chapter 21's tools to determine):
-> ```python
+> 
+> > ```python
 > > above = ''
 > > for super in aClass.__bases__:
 > >     above += self.__listclass(super, indent+4)
+> > ```
+> 
 > ...or...
+> 
+> > ```python
 > > above = ''.join(self.__listclass(super, indent+4) for super in aClass.__bases__)
-> ```
+> > ```
+> 
 
 You could also code the else clause in \_\_listclass like the following, as in the prior edition of this book -- an
 alternative that embeds everything in the format arguments list; relies on the fact that the join call kicks off
