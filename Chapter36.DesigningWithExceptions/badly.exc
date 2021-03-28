@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "2-badly.py", line 27, in <module>
+    inverse(0)
+  File "2-badly.py", line 24, in inverse
+    return 1 / x
+ZeroDivisionError: division by zero
