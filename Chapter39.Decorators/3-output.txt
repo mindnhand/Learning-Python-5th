@@ -1,0 +1,41 @@
+in property descriptor __init__
+in property descriptor __init__
+in property descriptor __init__
+in property descriptor __init__
+
+[1;36mEntrance[0m
+
+
+[1;37mApply to simple function[0m
+
+in property descriptor __call__
+call 1 to spam
+in original function spam
+< 6 >
+in property descriptor __call__
+call 2 to spam
+in original function spam
+< 15 >
+
+[1;37mApply to class method[0m
+
+in original class Person __init__
+in original class Person __init__
+< Bob Smith Sue Jones >
+in property descriptor __get__
+in enclosing method wrapper
+in property descriptor __call__
+call 1 to giveRaise
+in decorated class giveRaise method
+110000
+in property descriptor __get__
+in enclosing method wrapper
+in property descriptor __call__
+call 1 to lastName
+in decorated class lastName method
+in property descriptor __get__
+in enclosing method wrapper
+in property descriptor __call__
+call 2 to lastName
+in decorated class lastName method
+< Smith Jones >
